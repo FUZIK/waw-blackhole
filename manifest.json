@@ -1,0 +1,29 @@
+{
+  "name": "WhatsApp Web Injector",
+  "version": "1",
+  "permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "runAt": "document_start",
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["page-injector.js"]
+    }
+  ],
+  "icons": {
+    "46": "46x46.png"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "@pedroslopez.moduleRaid.js",
+    "wwa-app-hack.js",
+    "connect.js"
+  ],
+  "externally_connectable": {
+    "matches": ["https://web.whatsapp.com/*"]
+  }
+}
